@@ -1,0 +1,12 @@
+{
+    "KE2 Temp Plus Valve Control Quick Start Guide en": {
+        "1. Hardware features and specifications": "• Controller Power Supply: 120V / 208-240V\n• Outputs: (1) Single Pole Double Throw (SPDT) Relay\n• Relay Ratings (Normally Open):\n  • FLA: 5A @ 140V, 5A @ 240V\n  • Resistive: 5A @ 140V, 5A @ 240V\n  • Pilot Duty: 800VA @ 140V, 720VA @ 240V\n• Relay Ratings (Normally Closed):\n  • FLA: 5A @ 120V, 5A @ 240V\n  • Resistive: 5A @ 120V, 5A @ 240V\n  • Pilot Duty: 290VA @ 120V, 360VA @ 360V\n• Inputs: Air temperature sensor, Suction temperature sensor, Pressure transducer\n• Included Components:\n  • (1) KE2 Temp+ Valve controller (pn 21393)\n  • (1) 10’ pressure transducer\n  • (1) temperature sensor – 45”\n  • (1) temperature sensor – 10’\n• Physical: Onboard display with high voltage protective shield",
+        "2. Functions": "• Temperature control\n• Air defrost control\n• Electronic expansion valve (EEV) control\n• Liquid line solenoid or compressor contactor pilot control\n• Remote monitoring, control, and alarm notifications (requires KE2-EM)",
+        "3. Core features": "• Temperature regulation\n• Air defrost management\n• Electronic valve control",
+        "4. Additional features": "• Post Defrost Indicator ('Service Call Saver'): Display alternates 'dEF' and actual temperature after a defrost cycle\n• External System Off signal capability using sensor terminals",
+        "5. User experience": "• Onboard display for local status and temperature indication\n• Post-defrost cycle status is explicitly shown on the display\n• Remote access and control via Smartphone or Tablet when connected to the KE2 Edge Manager (KE2-EM)",
+        "6. Connectivity": "• Communication Protocol: RS-485 Modbus\n• Required Wiring: 18 gauge twisted shielded pair for communication\n• Connects to KE2 Edge Manager (KE2-EM) for remote access and WiFi connectivity",
+        "7. Standards compliance": "Information not available",
+        "8. Notes": "• A suction temperature sensor is required for electronic expansion valve control\n• The relay's input voltage is not required to match the controller’s input voltage\n• Temperature sensors are not polarized"
+    }
+}
