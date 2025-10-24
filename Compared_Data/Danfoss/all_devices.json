@@ -1,0 +1,42 @@
+{
+    "AK-RC 204B": {
+        "1. Hardware features and specifications": "- Power supply: 230 V~ \u00b1 10%, 50 Hz \u00b1 5%\n- Maximum input power: 6.3 VA\n- Maximum nominal current: 15 A\n- Relays:\n- SSV / DEFROST: SPDT - 20 A (NO 15A, NC 13A 250V~)\n- FAN: SPST - 16 A (12A 250V~)\n- COOL: SPST - 16 A (12A 250V~)\n- AUX 1: SPDT - 20 A (NO 15A, NC 13A 250V~)\n- AUX 2: SPDT - 16 A (NO 12A, NC 10A 250V~)\n- Probe temperature range: -50.0 \u2013 +99.9 \u00b0C\n- Resolution, setting and differential: 0.1 \u00b0C\n- Thermometric precision: \u00b11 \u00b0C\n- Loading tolerance of NTC probe at 25\u00b0C: \u00b10.4 \u00b0C\n- Working ambient temperature: -10 \u2013 +50 \u00b0C\n- Storage ambient temperature: -30 \u2013 +60 \u00b0C\n- Protection degree: IP 65\n- Installation category: II s/ EN 60730-1\n- Pollution degree: II s/ EN 60730-1\n- Dimensions: 290 mm (W) x 141 mm (H) x 84.4 mm (D)\n- Internal buzzer: Yes\n- Modbus address: Shown on label",
+        "2. Functions": "- Temperature regulation for walk-in coolers\n- Defrost control\n- Fan control\n- Solenoid valve control\n- Compressor control\n- Alarm management\n- HACCP alarms\n- Continuous cycle mode\n- Cold room light control\n- Door control\n- Stand-by mode",
+        "3. Core features": "- Temperature controller for walk-in coolers and freezers\n- Startup wizard for initial configuration\n- Magnetic thermal circuit protection",
+        "4. Additional features": "- Advanced defrost logic\n- Datalogger option with PR-SC4\n- Integration into Danfoss ADAP-KOOL system over Modbus\n- Standard Modbus connectivity for 3rd party integration\n- Optional cloud and remote connectivity via ProsaLink app, IoT module and Cloud service",
+        "5. User experience": "- Wide display with clear and intuitive menu\n- Keypad with buttons for navigation, settings, and controls\n- Indicators for status (stand-by, door open, alarms, fans, solenoid, compressor, defrost, continuous cycle, light, alarm mute, temperature unit, programming mode)",
+        "6. Connectivity": "- Modbus for integration\n- Optional IoT module for cloud connectivity",
+        "7. Standards compliance": "- EN60730-1 for relays and operations\n- IP65 protection\n- Pollution degree II\n- Installation category II\n- Double isolation between power supply, secondary circuit and relay output",
+        "8. Notes": "- Use only Danfoss supplied NTC probes\n- Install in protected location from vibrations, water, corrosive gases\n- IP65 valid only with cover closed and proper cable entry\n- Do not spray with high-pressure hoses\n- Relays are programmable, function depends on configuration\n- Digital inputs function depends on configuration"
+    },
+    "AK-RC 205C": {
+        "1. Hardware features and specifications": "- Same as AK-RC 204B except:\n- Working ambient temperature: -10 \u2013 +45 \u00b0C",
+        "2. Functions": "- Same as AK-RC 204B",
+        "3. Core features": "- Same as AK-RC 204B",
+        "4. Additional features": "- Same as AK-RC 204B",
+        "5. User experience": "- Same as AK-RC 204B",
+        "6. Connectivity": "- Same as AK-RC 204B",
+        "7. Standards compliance": "- Same as AK-RC 204B",
+        "8. Notes": "- Same as AK-RC 204B"
+    },
+    "AK-RC 305W-SD": {
+        "1. Hardware features and specifications": "- Power Supply: 100 \u2013 240 V AC\n- Dimensions: 290x141x84.4 mm\n- Sealing: IP65\n- Electrical Protection: Yes (16A)\n- Digital outputs: 2 SPDT 20A, 2 SPST 16A\n- Analog inputs: 2 NTC\n- Digital inputs: 1",
+        "2. Functions": "- Compressor control\n- Crankcase resistor control\n- Evaporator fans control\n- Defrost resistance control (up to 2 evaporators)\n- Solenoid valve control\n- Cold room light control\n- Door frame and drain heaters control\n- Door control (activity and alarms)\n- Remote Setpoint change and defrost\n- Alarms: Temperature, Open door",
+        "3. Core features": "- Temperature control\n- Advanced defrost function\n- Wizard Menu\n- Modbus",
+        "4. Additional features": "- Adaptive Defrost logic to optimize energy saving\n- Datalogger Option with PR-SC4\n- Integration into Danfoss ADAP-KOOL system over Modbus\n- Standard Modbus connectivity for 3rd party integration\n- Optional cloud and remote connectivity via ProsaLink app, IoT module and Cloud service",
+        "5. User experience": "- Wide display, clear and intuitive menu\n- Fast commissioning with startup wizard",
+        "6. Connectivity": "- Modbus\n- Optional cloud and remote connectivity",
+        "7. Standards compliance": "- IP65 sealing",
+        "8. Notes": "- Designed for cold storage rooms\n- Saves installation time, reduces energy consumption, best food quality preservation"
+    },
+    "AK-RC 251": {
+        "1. Hardware features and specifications": "- Power supply: 100 \u2013 240 V~, 50 \u2013 240 Hz\n- 5 relay temperature controller\n- No circuit breaker or contactor included\n- Protection degree: IP65 (with cover closed and proper cable entry)\n- NTC probes supplied by Danfoss\n- Probe extension up to 3,280 ft with 20AWG cable, max deviation 0.45\u00b0F",
+        "2. Functions": "- Cold regulation\n- Door management\n- Defrost\n- Defrost control\n- Fan control\n- Alarms\n- Alerts\n- Light control\n- Password protection\n- Remote Stand-by mode\n- Operation of auxiliary relays",
+        "3. Core features": "- Temperature controller for walk-in coolers and freezers\n- HACCP compliance\n- Continuous cycle mode",
+        "4. Additional features": "- Programmable auxiliary relays\n- Digital inputs configurable\n- Acoustic and relay alarms\n- Muted alarm option",
+        "5. User experience": "- Display with indicators for status\n- Keypad for control and programming\n- Menu navigation",
+        "6. Connectivity": "- Not specified in user guide",
+        "7. Standards compliance": "- IP65 protection\n- Local regulations compliance",
+        "8. Notes": "- Use only Danfoss NTC probes\n- Install protected from vibrations, water, corrosive gases\n- Clean with soft cloth, water, soap\n- Do not use abrasive detergents"
+    }
+}

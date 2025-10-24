@@ -1,0 +1,50 @@
+### 1. Hardware features and specifications
+- Power supply: 100 – 240 V~, 50 – 240 Hz
+- 5 relay temperature controller
+- No circuit breaker or contactor included
+- Protection degree: IP65 (with cover closed and proper cable entry)
+- NTC probes supplied by Danfoss
+- Probe extension up to 3,280 ft with 20AWG cable, max deviation 0.45°F
+
+### 2. Functions
+- Cold regulation
+- Door management
+- Defrost
+- Defrost control
+- Fan control
+- Alarms
+- Alerts
+- Light control
+- Password protection
+- Remote Stand-by mode
+- Operation of auxiliary relays
+
+### 3. Core features
+- Temperature controller for walk-in coolers and freezers
+- HACCP compliance
+- Continuous cycle mode
+
+### 4. Additional features
+- Programmable auxiliary relays
+- Digital inputs configurable
+- Acoustic and relay alarms
+- Muted alarm option
+
+### 5. User experience
+- Display with indicators for status
+- Keypad for control and programming
+- Menu navigation
+
+### 6. Connectivity
+- Not specified in user guide
+
+### 7. Standards compliance
+- IP65 protection
+- Local regulations compliance
+
+### 8. Notes
+- Use only Danfoss NTC probes
+- Install protected from vibrations, water, corrosive gases
+- Clean with soft cloth, water, soap
+- Do not use abrasive detergents
+

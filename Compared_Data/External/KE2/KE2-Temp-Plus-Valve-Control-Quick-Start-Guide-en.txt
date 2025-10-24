@@ -1,0 +1,1293 @@
+This reference should remain on site with
+the installed KE2 Temp+Valve controller.
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+thermsolutions KIT PN 21301 Q.3.49 January 2023
+What’s in the Kit - Parts List
+A
+The following are included in the KE2 Temp + Valve kit, pn 21301:
+A (1) KE2 Temp+ Valve controller (pn21393 - controller only)
+B (1)10’ pressure transducer
+B
+C (1) temperature sensor – 45”
+D (1) temperature sensor – 10’ C D
+E (4) self-tapping mounting screws
+F (1) sensor zip tie
+G (1) screwdriver
+H (2) screws for high voltage shield
+Supplies List
+E
+Standard truck stock items are required to install the
+controller. A list is provided below
+Conduit to go between the controller and the H
+V F
+evaporator.
+(2) Conduit connectors (straight or elbow as required).
+V
+G
+(4) High voltage wires matched to the load of the
+V
+liquid line solenoid/compressor and the controller.
+Wire labeling (numbers, colors, etc.).
+V
+Additional wire ties.
+V
+18 gauge twisted shielded pair (if extending sensor
+V
+wires/adding communication).
+foam insulation (if running wires outside the space).
+V
+silicone (for sealing any box penetrations).
+V
+Select Mounting Location
+The KE2 Temp + Valve is designed for a wide range of applications, with many Walk-in Under Counter
+potential installation locations. Breaking down the installation location, by
+application, provides the most helpful reference.
+Application Locations
+Evaporator cabinet
+Under counter
+Outside controlled space
+Evaporator cabinet
+Walk-in
+Adjacent to entrance
+Side-by-side Above door
+Wine Cabinet Commercial
+Remote Monitoring, Control, Alarm Notifications
+The Temp + Valve includes RS-485 Modbus communications, and can now
+be accessed remotely using the KE2 Edge Manager (KE2-EM). See page 4 for
+additional details.
+Service Call Saver - Post Defrost Indicator
+To eliminate unnecessary service calls, the KE2 Temp + Valve alerts the user
+when it is coming out of a defrost cycle using the onboard display. The display
+alternates between dEF and the actual temperature measured by the air sensor.
+This continues until the temperature has reached setpoint, or for the amount of
+time set by dFt (Defrost Time) whichever is shorter.
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 2
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Wiring the Controller
+A
+The Temp + Valve was designed with functionality in mind. The con-
+troller accepts 120V / 208-240V to power the controller through the
+lower conduit connection. The temperature sensor, pressure trans-
+ducer, valve, and communication wires are attached via the upper
+conduit connector.
+A When wiring the controller first remove the display by loosening
+the four corner screws. The display is connected to the lower board
+by a short ribbon cable.
+Caution: The board may be damaged if excessive force is used
+when removing the cover.
+B
+B After the four screws have been detached from the lower section,
+the cover may be gently moved to the side. C
+C Next remove the high voltage protective cover. There are two screws
+holding it in place.
+D With the high voltage cover removed, the two screw terminal con- D
+nectors can be seen. The Red 2-position connector is the controller’s
+power supply. E
+E Connect line (L1) ① to the right most terminal position and neutral
+(L2) ② to the terminal position.
+F The liquid line solenoid-compressor contactor relay accepts a vari-
+F
+ety of input voltages and is not required to match the controller’s
+input. See table for relay ratings. The relay uses the 3-position screw
+terminal to make the connection on the board. It may control either
+the liquid line solenoid or as a pilot to the compressor contactor.
+When connecting the wires to the relay, the controller will be break-
+ing one leg of the power.
+If solenoid will use the same voltage as controller, one leg of incom-
+ing power (L1) ⑤ supply for the liquid line solenoid should be con-
+nected to the common terminal of the liquid line solenoid relay, the
+left most terminal connection. The other leg of the incoming power
+(L2) should be connected directly to the solenoid lead. The remain-
+Relay Rating
+ing lead from the solenoid should be connected to the NO (normally
+open) ③ terminal, the center terminal location.
+Normally Open Normally Closed
+Proper wiring practices must be followed. Local wiring codes take
+precedence over any information in this bulletin. Outputs: 140V 240V 120V 240V
+(1) Relay
+FLA 5A 5A 5A 5A
+Single Pole
+G Replace high voltage shield after wiring is completed. Double Throw Resistive 5A 5A 5A 5A
+Pilot Duty 800VA 720VA 290VA 360VA
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 3
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Low Voltage Connections
+H Air Temperature Sensor - The air temperature sensor terminal is lo-
+cated on the cover’s circuit board, and is permanently attached. The
+temperature sensor input consists of the right two terminal positions.
+The sensor is not polarized and may be connected in either orienta-
+tion.
+The sensor should be fed through the top conduit connection, before
+being attached to the board.
+This terminal is also used for an External System Off signal in certain
+control modes. See the diagrams at the end of the bulletin for more
+detailed information.
+J I H
+I Suction Temperature Sensor - The suction temperature sensor
+terminal is located on the cover’s circuit board, and is permanently
+attached. The temperature sensor input consists of the middle two
+terminal positions. The sensor is not polarized and may be connected
+in either orientation.
+The suction temperature sensor is required when applying the con-
+troller with an electronic expansion valve. The sensor’s proximity
+to the evaporator outlet differs slightly for electronically controlled
+valves from the placement of a TEV bulb. Due to the more refined
+control from an electronically controlled valve, the sensor must be
+placed as close to the outlet of the coil as feasible.
+Although the distance from the outlet is different, the nature of the
+refrigerant’s flow through the tube remains unchanged, thus the ori-
+entation of the sensor remains at the 4 or 8 o’clock position. The sen-
+sor should be secured to the suction line using the included wire ties
+designed or low ambient operation. Only zip tie the sensor bulb,
+DO NOT zip tie the sensor cable.
+This terminal is also used for an External System Off signal in certain
+control modes. See the diagrams at the end of the bulletin for more
+detailed information.
+J
+Pressure Transducer – The pressure transducer terminal is located
+on the cover’s circuit board, and is permanently attached. The pres-
+sure transducer input consists of the 3 terminal positions on the left-
+hand side of the board.
+When replacing a mechanical expansion valve, the external equalizer
+can be repurposed for the pressure transducer. Cut and braze a 1/4”
+male SAE fitting with schrader valve to the external equalizer. The
+pressure transducer can alternatively be attached to the suction ser-
+vice port on the evaporator’s suction header. If a suction port is not
+available, mount the pressure tap on the top of a horizontal section of
+tube, approx. 3 inches downstream of the suction temperature sen-
+sor.
+Remote Monitoring, Control, Alarm Notifications
+The KE2 Temp + Valve includes RS-485 Modbus communications, and
+can now be accessed remotely using the KE2 Edge Manager (KE2-
+EM). See page 4 for further details.
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 4
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Accessing the KE2 Temp + Valve on a Local Area Network
+When the KE2 Temp + Valve is connected to the KE2-EM communication
+device’s serial terminal, the device will find the controller, and provide
+WiFi to Smartphone, Tablet,
+immediate local network communication. More information on the Laptop for service
+KE2-EM is found in bulletin Q.5.62.
+To exsisting network for
+Internet access (wired or Wi-Fi) KE2 Wireless Sensors
+WSeirnesleosrs
+Accessing the KE2 Temp + Valve on the
+WSeirnesleosrs
+Internet WSeirnesleosrs
+When used with the KE2-EM , the KE2 Temp +
+WAN
+Valve can be accessed remotely through the KE2
+LAN
+Smart Access portal, anywhere Internet service is
+available. So, there’s no need to worry about your BA
+refrigerated products overnight, during holidays, KE2 Switch
+or vacations. Just go online and see, or setup the
+Low TDeefmrostp thermsAoiTlru Dteeiofrnosmstp thermsAoTliurt eiDonesmfrospt Low TDeefmrostp
+email/text alarm alerts feature, for instant noti- - 3. 1 - 3. 1
+fication of system issues. More information on Hold for manual defrost Hold for manual defrost
+KE2 Smart Access is found in bulletin Q.1.34 and
+KE2 Therm Modbus Controllers:
+A.1.76. KE2 Temp + Air Defrost
+KE2 Temp + Valve Control
+KE2 Low Temp
+therEE ms
+f
+ovl
+f
+uai ti
+c
+opn
+i
+s
+e
+TMonrcaytor KE2 Adaptive Control
+KE2 Therm Ethernet Controllers:
+Prme E sasn N auna T dl d h E eoflr R do sftorBACK K K E E 2 2 E E v v a a p p o O r E a M tor Efficiency
+CNONMOC KE2 Evap RE(2)
+KE2 Controlled Environment
+KE2 Compressor Sequencer OEM
+KE2 Condensor Fan Control
+Webpage View
+From the Webpage you can monitor temperatures, relay status and
+alarms, as well as make changes to setpoints, and manually control
+the system.
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+HTRAE
+CNONMOC
+HTRAE
+KE2-EM
+Power
+therEE ms
+f
+ovl
+f
+uai ti
+c
+opn
+i
+s
+e
+TMonrcaytor
+Prme E sasn N auna T dl d h E eoflr R do sftorBACK
+Visit our YouTube channel for videos
+on the KE2-EM and KE2 Smart Access.
+Video 123 Intro Walk Through to the KE2-
+EM
+Video 125 The KE2-EM Best Practices for a
+Successful Setup
+Video 062 Communication Made Easy with
+KE2 Smart Access
+youtube.com/ke2therm
+Q.3.49 January 2023
+Page 5
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Programming the Controller
+KE2 Temp + Valve Control Basic Navigation
+Many applications can use the controller’s preset defrosts per day. This
+Understanding the KE2 Temp + Valve Defrost’s menu structure will simpli-
+automatically spaces the defrosts throughout the day, based on the num-
+fy configuration. Figure 1 shows the basic button functions, as well as a
+ber of defrost cycles selected. The user can change the number of defrost
+list of basic setpoints.
+cycles performed by changing the Defrost per Day setpoint, ranging from
+0 to 12. Or, if required, each individual defrost can be scheduled for a spe- NOTE: A brief description of each of the abbreviations is found in the al-
+cific time of day. phabetical list on pages 15-16.
+Figure 1
+Indicator lights
+Red light - Critical alarm (system is NOT running)
+Yellow light - Non-critical alarm (system running)
+Green light - Calling for refrigeration, liquid Line Solenoid (LLS)/compressor contactor relay energized.
+Green blinking - Waiting on short cycle timer to energize/de-energize LLS/comp. contactor relay.
+3 5 1 Access Setpoint mode by pressing and holding the E N T E R button
+until CtL (control type) displays on the screen.
+Use  arrow to advance through available setpoints.
+Press E N T E R to view the current setting.
+Use the  and  to change the setpoint.
+Press E N T E R to move between digits to accelerate the changes.
+Press E N T E R and hold to confirm each setpoint change
+Press B A C K to escape.
+Accessing the Menus
+ADVANCED MENUS BASIC MENUS
+CtL CtL
+(control type) (control type)
+Press and hold Press and hold
+for 3 seconds for 3 seconds
+EEV Control Only EEV Control Only
+EEV Control No Thermostat HGB & EEPR Control Subcool Control EEV Control No Thermostat HGB & EEPR Control
+SHt SH EPR or HGB SUb SHt SH EPR or HGB
+E i P S L L L t A C d n S P P P d S t S P d P d P C t t H d o F ( i i ( f d O O O O s s c c o a r u u n n n n P P r y t s s l l l l t t d S S U r t t d d d d d d d d d d d y y y y ) t t t O O F ( ( P o o r F 1 2 3 4 5 6 7 8 9 1 1 p p b v v v v d G m m S d P i i i i r r 0 1 s s s s e e ( i i i i ) ) D s s b b b b i i / / l l l l s s e t t e e e e e e f s s r i i i i m m e e f f f f o l l C i i C s e e p p n n t c c U U ) ) p p p t t S S e e u u e d d t t r M M an e u n a u l E i P S L L L A U P i d C F S P r n n E A P P P d S O r O t L E d n t P L O d P C C t A t r o r ( i i F t O O O S s s c ⑦ r ⑦ ⑦ ⑨ u n n n P P t s l l l t t S S U r t y y y t t O F ( ( ⑧ o r F p p b v v v G m S P i i i r r s s s e e i i i ) s s b b b i / / l l l s t t e e e e e s i i i m m e f f f l C i i e p p n n c U ) ) p p t S e u u d t t E i P t C d d H L t A U P i d n n s A A d r S S P F E d n A t P O d P t t r H O d r ( ( f d t O O O c c o a u u n n o r y s s l l d S S U t d d d d d d d d d d d d r y y ) t t O P o o r F 1 2 3 4 5 6 7 8 9 1 1 1 t b v v d m m P S d i i 0 1 2 s s ( r i i ) ) D b b i i l l s s e e e f s s r i i e e f f o l l C C s e e t c c U U p t t S S M e e e d d r M a n e u n a u l E i r S t H L t A U P i d C F S P r n n S A F E A A d S O r O L E d n A t P G L O d P C A t r O r ( i F t O O S O s c ⑦ ⑦ ⑦ ⑨ u n n P s l l t S S U t y y t O ( ⑧ o r F p b v v N m S P i i r s s e o i i ) s b b V n i / l l s t e e A e A s i i m e R f f d l C i e p u I n c U A ) p s t S t e u B a d t L b E le r ② S S P S S i O C A S n t Y H U A O r L ( P P L v S M S s t t ③ r n ① ⑥ i ④ ④ ③ e E w / N ⑤ L o L U n t ly) E r S t A C d d S F d S S P F d g P t t H d F ( i u ( f d O O O s c c o a n u u n n n P r y d s s l l l t d S S U t d d d d d d d d d d d d y y y ) e t t O ( P o o r F 1 2 3 4 5 6 7 8 9 1 1 1 r p b v v v d m m S A d i i i r 0 1 2 s s s e ( d i i i ) ) ① D F s b b b v i i / l l l s s e o a t e e e e f s s n N r o i i i m e e f f f o c l l o C i C t e s e e p n t n d t c c U U ) p p t t s S S o e e u e h d d t r t o e w s n if i E r S n F d S E g P t ( i u M O O E s c n P u n n e P d s n l l R t S S U y y e t u ( , o r F r p b v v E m S A i i r s s H e d i i ) s b b G v i / l l s a t e e B e s n i i m e P f f c l , C i e e p n S d c U ) p H t S e u , d t o r SUb co E t C d d S d n S P F t t t H d ( ( f d O O r c c o a o u u n n r y l s s l l d S S U t d d d d d d d d d d d d , y y ) t t O P a o o r F 1 2 3 4 5 6 7 8 9 1 1 1 b v v d m m n S d i i 0 1 2 s s ( d i i ) ) D b b i i l l s s e e e f s s r i i e e f f o l l C C s e e t c c U U p t t S S e e e d d r
+d12 Manual CLA⑦ input is pressure.
+dFt Menu FAC⑦ ② Only shown if SUb control is selected.
+HAO SOF⑦⑧
+LAO POS⑨ ③Only shown if SH, SHt, or SUb control is selected.
+t A A d d r rEL ④ Only if in SH, SHt, or SUb and Pt is selected .
+Unt ⑤Only shown if input is pressure for EEPR or EHGBP
+PrO
+int ⑥ Only shown if in SH, SHt, or SUB and tt selected.
+dEr ⑦ Press & hold ENTER for 3 seconds to activate.
+Manual CLA⑦
+Menu FAC⑦ ⑧Press BACK button to return to normal operation.
+SOF⑦⑧ ⑨ Press ENTER to enter manual valve control,
+POS⑨ & to adjust, and press BACK to exit.
+rEL
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 6
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Service Call Saver - Post Defrost Indicator
+To eliminate unnecessary/unwarranted service calls, the KE2 Temp + Valve alerts the user when it is coming out of a defrost cycle using the onboard
+display. The display alternates between dEF and the actual temperature measured by the air sensor. This continues until the temperature has reached
+setpoint, or for the amount of time set by dFt (Defrost Time) whichever is shorter.
+Variables Menu
+Name Description Range
+rtP rtP Room Temperature (not shown if in SUb, EEPR or EHGBP control, and input is pressure) -50ºF to 100ºF
+LLt LLt Leaving Liquid Temp (Subcool control only) -50ºF to 150ºF
+SYS SYS System Mode: Refrigerate, Defrost, Off, System Off (manually) rEF, dEF, OFF, SOF, ESO
+SH SH Superheat (only shown if SH or SHt control selected) 0ºF to 200ºF
+PrS Prs Pressure (only if input control type is pressure) -14.6 to 150 psig
+SUt SUt Suction Temperature (only if in SH or SHt control selected) -50ºF to 150ºF
+SAt SAT Saturation Temperature (only if in SH or SHt control selected, and Pt is selected as input) -87ºF to 150ºF
+inL inL Inlet Temperature (only if in SH or SHt control selected, and tt selected as input) -50ºF to 150ºF
+OPn OPn Valve Percent Open 0 to 100%
+COr COr Compressor Relay OFF - On OFF On
+nOA nOA (no alarm), PSA, SSA, iSA, ASA, HSH,
+ALS ALS Alarm Status: See table below for alarm descriptions.
+LSH, LPA, Pdt, SCC, HtA, HPA, LtA, LPA, PF
+Alarm List Refrigerant List
+Alarms Description LED Refrigerant Abbreviation
+R-22 R22
+R-134a 134
+R-404A 404
+R-407A 40A
+R-407C 40C
+R-410A 410
+R-717 717
+R-422A 42A
+R-422D 42d
+R-507 507
+R-448A 448
+R-449A 449
+R-450A 450
+R-438A 438
+R-408A 408
+R-409A 409
+R-407F 407
+R-744 744
+R-513A 513
+R-458A 458
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+LACITIRC .ffo
+si metsyS
+iSA iSA Inlet Sensor Alarm: Valve closes and turns system off. Red
+PSA PSA Pressure Sensor Alarm: Valve closes and turns system off. Red
+SSA SSA Suction Temperature Sensor Alarm: Valve closes and turns system off. Red
+LACITIRC-
+NON
+gnilooc
+niatniam
+ot
+gniyrt
+dna
+,gninnur
+llits
+si
+metsyS
+Room (Air )Sensor Alarm: Alarm occurs when the room temperature sensor input is open or
+ASA ASA Amber
+shorted.
+High Pressure Alarm: occurs when the temperature reading is above the Pressure set point
+HPA HPA + High Alarm Offset setpoint for the amount of time in setpoint High/Low Alarm Delay.; High Amber
+Temperature or pressure alarm is suppressed while in defrost.
+High Superheat Alarm: Occurs when superheat is 2 or more degrees above setpoint and valve
+HSH HSH Amber is 100% open for 90 minutes; Clears when superheat is within 2 degrees of setpoint
+High Temperature Alarm: occurs when the temperature reading is above the Temperature set
+point + Temperature differential set point + High Alarm Offset set point for the amount of time HtA HtA Amber
+in setpoint High/Low Alarm Delay; High Temperature or pressure alarm is cleared and disabled
+while in defrost
+Low Pressure Alarm: When LPC (Low Pressure Cut Out) is enabled while in refrigeration mode,
+LPA LPA if compressor is shut off 3 times for pressure going below LPC set point without being satisfied Amber
+on temperature, set alarm; Alarm is cleared when temperature is satisfied
+Low Superheat Alarm: Occurs when superheat is less than 3 degrees for 5 minutes; Clears
+LSH LSH Amber
+when superheat is above 3 Fahrenheit degrees
+Leaving Liquid Temp Sensor Alarm: Leaving Liquid Temp Sensor (Temp 2) input is open or LSA LSA Amber
+shorted. SUb (subcool) control mode only.
+Low Temperature Alarm: occurs when the temperature reading is below the Temperature
+LtA LtA setpoint - Low Alarm Offset setpoint for the amount of time in setpoint High & Low Temperature Amber
+Alarm Delay; Low temperature or pressure is cleared and disabled when in defrost
+Pump Down Timeout Alarm: Occurs when call for pumping system down and the compressor
+Pdt Pdt is turned off due to time out instead of pressure reaching LPC setpoint for 2 consecutive times; Amber
+Alarm is cleared when pressure reaches LPC setpoint instead of timing out.
+Power Failure: occurs when the controller has lost power at some point, and controller had CUS
+PF Pf Amber
+(custom defrost schedule) selected under Defrosts Per Day
+Short Cycle Compressor Alarm: Occurs when the compressor has to come back on because of
+SCC sCC pressure going above LPC set point without satisfying minimum off time. If this occurs 4 times Amber
+while in Off mode, can be over multiple cycles, set alarm; Clear alarm if pressure does not go
+above LPC setpoint through minimum off time.
+Q.3.49 January 2023
+Page 7
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Basic Menu: “Out of Box” or if Superheat (SHt)
+Setpoint Description Range Default
+SHt, EPr, HGb, SH, SUb
+CtL CtL Control Type - EEV+Temp, EEV Only, EEPR, EHGBP, Subcool SHt
+SHt epr H b SH SUb
+Edt Edt Valve Type: Mechanical (tHr), KE2-HSV (HS), KE2-RSV (rS), tHr, HS, rS, SEi ,SEr CrL, CUS**
+rS
+(Expansion device type) SEI, SER, Carel (CrL), Custom (CUS) tHr HS rS SEi SEr CrL CUS
+Only if CUS CUS Sr Sr Step Rate 30 - 400 30
+is used for Edt Edt SFS SFS Steps Full Stroke 20(0)-640(0)*** 50(0)***
+(valve type) Ub Ub Motor Type Uni-(unipolar), bi (bipolar) Uni bi Unipolar
+Only if inP inP(in-
+put) is Pt Pt under rFg rF Refrigerant Type See Refrigerant List on Page 6 404
+Advanced Menu
+SSP ssp Superheat Setpoint 5.0ºF (2.8K) to 50ºF (28K) 8.0°F (4.4K)
+tS tS Temperature Setpoint -50°F (-45°C) to 100°F (38°C) 35.0°F (9.7°C)
+AdF AdF Air Differential 1.0°F (0.5K) to 30°F (17K) 2.0°F (1.1K)
+CSH CSH Compressor Starts/Hour Maximum 5 (Off)* to 10 6
+dPd dPd Defrost Per Day 0 to 12, CUS** 4
+tOd tOd Time of Day 00:00 to 23:59 12:00
+d1 d1 Start time of Defrost #1 00 - 23 diS (disabled)
+d2 d2 Start time of Defrost #2 00 - 23 diS
+d3 d3 Start time of Defrost #3 00 - 23 diS
+d4 d4 Start time of Defrost #4 00 - 23 diS
+d5 d5 Start time of Defrost #5 00 - 23 diS
+Only if dPd (Defrosts
+d6 d6 Start time of Defrost #6 00 - 23 diS
+per Day) is CUS
+d7 d7 Start time of Defrost #7 00 - 23 diS
+d8 d8 Start time of Defrost #8 00 - 23 diS
+d9 d9 Start time of Defrost #9 00 - 23 diS
+d10 d10 Start time of Defrost #10 00 - 23 diS
+d11 d11 Start time of Defrost #11 00 - 23 diS
+d12 d12 Start time of Defrost #12 00 - 23 diS
+dFt dft Defrost Time 6 min to 720 min 45 min
+*Selecting fewer than 5 compressor starts per hour results in the starts per hour feature being turned off. The compressor will then function on temperature only.
+** Selecting CUS (custom) unlocks additional Setpoints.
+*** Last zero is truncated on the display.
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 8
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Advanced Menu: “Out of Box” or if Superheat (SHt)
+Setpoint Description Range Default
+SHt, EPr, HGb, SH, SUb
+CtL CtL Control Type - EEV+Temp, EEV Only, EEPR, EHGBP, Subcool SHt
+SHt epr H b SH SUb
+Edt Edt Valve Type: Mechanical (tHr), KE2-HSV (HS), KE2-RSV (rS), tHr, HS, rS, SEi ,SEr CrL, CUS**
+rS
+(Expansion device type) SEI, SER, Carel (CrL), Custom (CUS) tHr HS rS SEi SEr CrL CUS
+Only if CUS CUS Sr Sr Step Rate 30 - 400 30
+is used for Edt Edt SFS SFS Steps Full Stroke 20(0)-640(0)*** 50(0)***
+(valve type) Ub Ub Motor Type Uni-(unipolar), bi (bipolar) Uni bi Unipolar
+Input type when CtL is SH: pressure/temp (Pt) or tempera-
+inP inP Pt, tt Pt tt Pt
+ture/temperature (tt)
+Only if inP (input)
+rFG rF Refrigerant Type See Refrigerant List on Page 6 404
+is Pt
+SSP SSP Superheat Setpoint 5ºF (2.8K) to 50ºF (28K) 8.0°F (4.4K)
+Standard: 10 psig to 150 psig
+Only if inP (input)
+tOP Maximum (Top) Operating Pressure setpoint R-410A 10psig to 300 psig 150 psig
+is Pt
+R-744 10 psig to 500 psig
+LPC LPC Low Pressure Cut Out Setpoint -5 psig to 138 psig 8.0 psig
+LPd LPd Low Pressure Cut Out Differential 1 to 50 psig 15.0 psig
+LPt LPt Low Pressure Cut Out Delay O to 15 min. O min.
+tS tS Temperature Setpoint -50°F (-45°C) to 100°F (38°C) 35.0°F (4.4K)
+AdF AdF Air Differential 1.0°F (0.5K) to 30.0°F (17K) 2.0°F (1.1K)
+CSH CSH Compressor Starts/Hour Maximum 5 (Off)* to 10 6
+dPd dPd Defrost Per Day 0 to 12, CUS** 4
+tOd tOd Time of Day 00:00 to 23:59 12:00
+d1 d1 Start time of Defrost #1 00 - 23 diS (disabled)
+d2 d2 Start time of Defrost #2 00 - 23 diS
+d3 d3 Start time of Defrost #3 00 - 23 diS
+d4 d4 Start time of Defrost #4 00 - 23 diS
+d5 d5 Start time of Defrost #5 00 - 23 diS
+Only if dPd (Defrosts
+d6 d6 Start time of Defrost #6 00 - 23 diS
+per Day) is CUS
+d7 d7 Start time of Defrost #7 00 - 23 diS
+d8 d8 Start time of Defrost #8 00 - 23 diS
+d9 d9 Start time of Defrost #9 00 - 23 diS
+d10 d10 Start time of Defrost #10 00 - 23 diS
+d11 d11 Start time of Defrost #11 00 - 23 diS
+d12 d12 Start time of Defrost #12 00 - 23 diS
+dFt dft Defrost Time 6 min to 720 min. 45 min.
+HAO HAO High Alarm Offset 1°F (1K) to 10°F (6K) 5.0°F
+LAO LAO Low Alarm Offset 1°F (1K) to 10°F (6K) 3.0°F
+tAd tAd Temp Alarm Delay 1 min. to 180 min 90 min.
+Adr Adr Address, Mod Bus Communications 1 to 247 1
+Unt Unt Units for temperature display FAH or CEL FAH
+PrO PrO Proportional 0 to 255 3
+int int Integral 0 to 255 5
+dEr dEr Derivative 0 to 255 3
+CLA CLA Manually Clear Alarms
+FAC FAC Return Controller to Factory Default Settings
+MANUAL CONTROL
+SOF SOF Manually Enter System Off Mode
+OPTIONS
+POS POS Manually Adjust Valve Position 0 to 100%
+rEL reL Manually Control Relay
+*Selecting fewer than 5 compressor starts per hour results in the starts per hour feature being turned off. The compressor will then function on temperature only.
+** Selecting CUS (custom) unlocks additional Setpoints.
+*** Last zero is truncated on the display.
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 9
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Basic Menu: EEV Control Only - No Thermostat (SH)
+Setpoint Description Range Default
+SHt, EPr, HGb, SH, SUb
+CtL CtL Control Type - EEV+Temp, EEV Only, EEPR, EHGBP, Subcool SH
+SHt epr H b SH SUb
+tHr, HS, rS, SEi ,SEr CrL, CUS**
+Edt Edt Valve Type: Mechanical (tHr), KE2-HSV (HS), KE2-RSV (rS),
+tHr HS rS SEi SEr CrL rS
+(Expansion device type) SEI, SER, Carel (CrL), Custom (CUS) CUS
+Only if CUS CUS Sr Sr Step Rate 30 - 400 30
+is used for Edt Edt SFS SFS Steps Full Stroke 20(0)-640(0)*** 50(0)***
+(valve type) Ub Ub Motor Type Uni-(unipolar), bi (bipolar) Uni bi Unipolar
+Only if inP (input)
+rFG rF Refrigerant Type See Refrigerant List on Page 6 404
+is Pt
+SSP SSP Superheat Setpoint 5.0ºF (2.8K) to 50.0ºF (28K) 8°.0F (4.4K)
+* Selecting fewer than 5 compressor starts per hour results in the starts per hour feature being turned off. The compressor will then function on temperature only.
+** Selecting CUS (custom) unlocks additional Setpoints.
+*** Last zero is truncated on the display.
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 10
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Advanced Menu: EEV Control Only - No Thermostat (SH)
+Setpoint Description Range Default
+Control Type - EEV+Temp, EEV Only, EEPR, EHGBP, SHt, EPr, HGb, SH, SUb
+CtL CtL SH
+Subcool SHt epr H b SH SUb
+tHr, HS, rS, SEi ,SEr CrL, CUS**
+Edt Edt Valve Type: Mechanical (tHr), KE2-HSV (HS), KE2-
+tHr HS rS SEi SEr rS
+(Expansion device type) RSV (rS), SEI, SER, Carel (CrL), Custom (CUS) CrL CUS
+Only if CUS CUS Sr Sr Step Rate 30 - 400 30
+is used for Edt Edt SFS SFS Steps Full Stroke 20(0)-640(0)*** 50(0)***
+(valve type) Ub Ub Motor Type Uni (unipolar), bi (bipolar) Uni bi Unipolar
+Input type when CtL is SH: pressure/temp (Pt) or
+inP inP Pt, tt Pt tt Pt
+temperature/temperature (tt)
+Only if inP (input)
+rFG rF Refrigerant Type See Refrigerant List on Page 6 404
+is Pt
+SSP SSP Superheat Setpoint 5.0ºF (2.8K) to 50.0ºF (28K) 8.0°F (4.4K)
+Standard: 10 psig to 150 psig
+tOP Maximum (Top) Operating Pressure setpoint R-410A 10psig to 300 psig 150 psig
+Only if inP (input) R-744 10 psig to 500 psig
+is Pt LPC LPC Low Pressure Cut Out Setpoint -5 psig to 138 psig 8.0 psig
+LPd LPd Low Pressure Cut Out Differential 1.0 to 50.0 psig 15.0 psig
+LPt LPt Low Pressure Cut Out Delay 0 to 15 min 0 min
+Not shown if SH
+tAd tAd Temp Alarm Delay 1 min to 180 min 90 min
+(Superheat) is selected
+Adr Adr Address, Mod Bus Communications 1 to 247 1
+Unt Unt Units for temperature display FAH or CEL FAH
+PrO PrO Proportional 0 to 255 3
+int int Integral 0 to 255 5
+dEr dEr Derivative 0 to 255 3
+CLA CLA Manually Clear Alarms
+FAC FAC Return Controller to Factory Default Settings
+MANUAL CONTROL
+SOF SOF Manually Enter System Off Mode
+OPTIONS
+POS POS Manually Adjust Valve Position 0 to 100%
+rEL reL Manually Control Relay
+* Selecting fewer than 5 compressor starts per hour results in the starts per hour feature being turned off. The compressor will then function on temperature only.
+** Selecting CUS (custom) unlocks additional Setpoints.
+*** Last zero is truncated on the display.
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 11
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Basic Menu: Hot Gas Bypass (HGb) or EEPRV (EPr)
+Setpoint Description Range Default
+Control Type - EEV+Temp, EEV Only, EEPR, SHt, EPr, HGb, SH, SUb
+CtL CtL HGb / EPr
+EHGBP, Subcool SHt epr H b SH SUb
+Hot Gas Bypass Valve
+SDR-3(Sd3), SDR-4 (Sd4), Custom (CUS) Sd3, Sd4, CUS** Sd3 Sd4 CUS Sd4
+Options
+Edt Edt
+Electronic Pressure CDS 2-7 (Cd2), CDS 9-17 (Cd9 ), ESR12 (ES1), Cd2, Cd9, ES1, ES2, dS1, dS4, CUS
+(Expansion device type)
+Regulating Valve ESR20 (ES2), KVS15 (dS1), KVS42 (dS4) , Custom Cd2 Cd9 ES1 ES2 dS1 Cd9
+Options (CUS) dS4 CUS
+Only if CUS CUS Sr Sr Step Rate 30 - 400 30
+is used for Edt Edt SFS SFS Steps Full Stroke 20(0)-640(0)*** 50(0)***
+(valve type) Ub Ub Motor Type Uni-(unipolar), bi (bipolar) Uni bi Unipolar
+Only if inP (input) is
+PrS under Advanced PSP psp Pressure Setpoint 0 psig to 138 psig 50 psig
+Menu
+Only if inP inP
+tS TS Temperature Setpoint -50.0°F (-45°C) to 100°F (38°C) 35.0°F (9.7°C)
+(input) is tPr tPr
+CSH CsH Compressor Starts/Hour Maximum 5 (Off)* to 10 6
+dPd dpd Defrost Per Day 0 to 12, CUS** 4
+tOd tOd Time of Day 00:00 to 23:59 12:00
+d1 d1 Start time of Defrost #1 00 - 23 diS (disabled)
+d2 d2 Start time of Defrost #2 00 - 23 diS
+d3 d3 Start time of Defrost #3 00 - 23 diS
+d4 d4 Start time of Defrost #4 00 - 23 diS
+d5 d5 Start time of Defrost #5 00 - 23 diS
+Only if dPd (Defrosts
+d6 d6 Start time of Defrost #6 00 - 23 diS
+per Day) is CUS
+d7 d7 Start time of Defrost #7 00 - 23 diS
+d8 d8 Start time of Defrost #8 00 - 23 diS
+d9 d9 Start time of Defrost #9 00 - 23 diS
+d10 d10 Start time of Defrost #10 00 - 23 diS
+d11 d11 Start time of Defrost #11 00 - 23 diS
+d12 d12 Start time of Defrost #12 00 - 23 diS
+dFt dft Defrost Time 6 min to 720 min 45 min
+* Selecting fewer than 5 compressor starts per hour results in the starts per hour feature being turned off. The compressor will then function on temperature only.
+** Selecting CUS (custom) unlocks additional Setpoints.
+*** Last zero is truncated on the display.
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 12
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Advanced Menu: Hot Gas Bypass (HGb) or EEPRV (EPr)
+Setpoint Description Range Default
+Control Type - EEV+Temp, EEV Only, EEPR, SHt, EPr, HGb, SH, SUb
+CtL CtL HGb / EPr
+EHGBP, Subcool SHt epr H b SH SUb
+Hot Gas Bypass Valve
+SDR-3(Sd3), SDR-4 (Sd4), Custom (CUS) Sd3, Sd4, CUS** Sd3 Sd4 CUS Sd4
+Options
+Edt Edt
+Electronic Pressure CDS 2-7 (Cd2), CDS 9-17 (Cd9 ), ESR12 (ES1), Cd2, Cd9, ES1, ES2, dS1, dS4, CUS
+(Expansion device type)
+Regulating Valve ESR20 (ES2), KVS15 (dS1), KVS42 (dS4) , Custom Cd2 Cd9 ES1 ES2 dS1 Cd9
+Options (CUS) dS4 CUS
+Only if CUS CUS Sr Sr Step Rate 30 - 400 30
+is used for Edt Edt SFS SFS Steps Full Stroke 20(0)-640(0)*** 50(0)***
+(valve type) Ub Ub Motor Type Uni-(unipolar), bi (bipolar) Uni bi Unipolar
+Input type when CtL is HgB: pressure (PrS )or
+inP inP PrS, tPr Prs tPr tPr
+temperature (tPr)
+Only if inP (input) is
+PrS under Advanced PSP psp Pressure Setpoint 0 psig to 138 psig 50 psig
+Menu
+Only if inP inP
+tS TS Temperature Setpoint -50.0°F (-45°C) to 100°F (38°C) 35.0°F (9.7°C)
+(input) is tPr tPr
+CSH CsH Compressor Starts/Hour Maximum 5 (Off)* to 10 6
+dPd dpd Defrost Per Day 0 to 12, CUS** 4
+tOd tOd Time of Day 00:00 to 23:59 12:00
+d12 d12 Start time of Defrost #12 00 - 23 diS (disabled)
+d11 d11 Start time of Defrost #11 00 - 23 diS
+d10 d10 Start time of Defrost #10 00 - 23 diS
+d9 d9 Start time of Defrost #9 00 - 23 diS
+d8 d8 Start time of Defrost #8 00 - 23 diS
+Only if dPd (Defrosts
+d7 d7 Start time of Defrost #7 00 - 23 diS
+per Day) is CUS
+d6 d6 Start time of Defrost #6 00 - 23 diS
+d5 d5 Start time of Defrost #5 00 - 23 diS
+d4 d4 Start time of Defrost #4 00 - 23 diS
+d3 d3 Start time of Defrost #3 00 - 23 diS
+d2 d2 Start time of Defrost #2 00 - 23 diS
+d1 d1 Start time of Defrost #1 00 - 23 diS
+dFt dft Defrost Time 6 min to 720 min 45 min
+HAO HAO High Alarm Offset 1.0°F (1K) to 10.0°F (1K) 5.0°F
+LAO LAO Low Alarm Offset 1.0°F (1K) to 10.0°F (1K) 3.0°F
+tAd tAd High & Low Temp or Pressure Alarm Delay 1 min to 180 min 90 min
+Adr Adr Address, Mod Bus Communications 1 to 247 1
+Unt Unt Units for temperature display FAH or CEL FAH CEL FAH
+PrO PrO Proportional 0 to 255 3
+int int Integral 0 to 255 5
+dEr dEr Derivative 0 to 255 3
+CLA CLA Manually Clear Alarms
+FAC FAC Return Controller to Factory Default Settings
+MANUAL CONTROL
+SOF SOF Manually Enter System Off Mode
+OPTIONS
+POS POS Manually Adjust Valve Position 0 to 100%
+rEL reL Manually Control Relay
+* Selecting fewer than 5 compressor starts per hour results in the starts per hour feature being turned off. The compressor will then function on temperature only.
+** Selecting CUS (custom) unlocks additional Setpoints.
+*** Last zero is truncated on the display.
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 13
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Basic Menu: Subcool (SUb)
+Setpoint Description Range Default
+Control Type - EEV+Temp, EEV Only, EEPR, EHGBP, SHt, EPr, HGb, SH, SUb
+CtL CtL SUb
+Subcool SHt epr H b SH SUb
+tHr, HS, rS, SEi ,SEr CrL, CUS**
+Edt Edt Valve Type: Mechanical (tHr), KE2-HSV (HS), KE2-
+tHr HS rS SEi SEr rS
+(expansion device type) RSV (rS), SEI, SER, Carel (CrL), Custom (CUS) CrL CUS
+Only if CUS CUS Sr Sr Step Rate 30 - 400 30
+is used for Edt Edt SFS SFS Steps Full Stroke 20(0)-640(0)*** 50(0)***
+(valve type) Ub Ub Motor Type Uni-(unipolar), bi (bipolar) Uni bi Unipolar
+Input type when CtL is SH: pressure/temp (Pt) or
+inP inP Pt, tt Pt tt Pt
+temperature/temperature (tt)
+Only if inP (input)
+rFG rF Refrigerant Type See Refrigerant List on Page 6 404
+is Pt
+SSP SSP Superheat Setpoint 5ºF (2.8K) to 50ºF (28K) 8.0°F (4.4K)
+tS tS Temperature Setpoint -50°F (-45°C) to 100°F (38°C) 35.0°F (4.4K)
+** Selecting CUS (custom) unlocks additional Setpoints.
+*** Last zero is truncated on the display.
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 14
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Advanced Menu: Subcool (SUb)
+Setpoint Description Range Default
+Control Type - EEV+Temp, EEV Only, EEPR, EHGBP, SHt, EPr, HGb, SH, SUb
+CtL CtL SUb
+Subcool SHt epr H b SH SUb
+tHr, HS, rS, SEi ,SEr CrL, CUS**
+Edt Edt Valve Type: Mechanical (tHr), KE2-HSV (HS), KE2-
+tHr HS rS SEi SEr rS
+(expansion device type) RSV (rS), SEI, SER, Carel (CrL), Custom (CUS) CrL CUS
+Only if CUS CUS Sr Sr Step Rate 30 - 400 30
+is used for Edt Edt SFS SFS Steps Full Stroke 20(0)-640(0)*** 50(0)***
+(valve type) Ub Ub Motor Type Uni-(unipolar), bi (bipolar) Uni bi Unipolar
+Input type when CtL is SH: pressure/temp (Pt) or
+inP inP Pt, tt Pt tt Pt
+temperature/temperature (tt)
+Only if inP (input)
+rFG rF Refrigerant Type See Refrigerant List on Page 6 404
+is Pt
+SSP SSP Superheat Setpoint 5ºF (2.8K) to 50ºF (28K) 8.0°F (4.4K)
+Standard: 10 psig to 150 psig
+Only if inP (input)
+tOP Maximum (Top) Operating Pressure setpoint R-410A 10psig to 300 psig 150 psig
+is Pt
+R-744 10 psig to 500 psig
+tS tS Temperature Setpoint -50°F (-45°C) to 100°F (38°C) 35.0°F (4.4K)
+HAO HAO High Alarm Offset 1°F (1K) to 10°F (6K) 5.0°F
+LAO LAO Low Alarm Offset 1°F (1K) to 10°F (6K) 3.0°F
+tAd tAd Temp Alarm Delay 1 min to 180 min 90 min
+Adr Adr Address, Mod Bus Communications 1 to 247 1
+Unt Unt Units for temperature display FAH or CEL FAH
+PrO PrO Proportional 0 to 255 3
+int int Integral 0 to 255 5
+dEr dEr Derivative 0 to 255 3
+CLA CLA Manually Clear Alarms
+FAC FAC Return Controller to Factory Default Settings
+MANUAL CONTROL
+SOF SOF Manually Enter System Off Mode
+OPTIONS
+POS POS Manually Adjust Valve Position 0 to 100%
+rEL reL Manually Control Relay
+** Selecting CUS (custom) unlocks additional Setpoints.
+***Last zero is truncated on the display.
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 15
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Abbreviations - Alphabetical Listing
+Abbreviation Name Type Description
+AdF AdF Air Differential Setpoint Number of degrees air temp must be above room temp setpoint (tS) to return system to refrigeration mode
+Adr Adr Modbus Address Setpoint Controller’s address for communications
+ALS ALS Alarm Status Variable Pressing ENTER from ALS will show active alarm list; scroll through list using up or down arrow.
+ASA ASA Room/Air Sensor Alarm Alarm Alarm occurs when the room temperature sensor input is open or shorted
+bi bi Bipolar Setpoint Option under (Ub) Motor Type when using a CUS (custom) valve
+Cd2 CD2 CDS 2-7 Valve Setpoint Option under EDt valve selection for pressure regulating valves
+Cd9 CD9 CDS 9 Valve Setpoint Option under EDt valve selection for pressure regulating valves
+CEL CEL Celsius Setpoint Option for temperature units
+CLA CLA Clear Alarms Manually Manual Allows user to manually clear alarms
+COr COr Compressor Relay Variables Current state of liquid line solenoid/compressor relay
+CrL CrL Carel Valve Setpoint Option under EDt (Expansion Device Type) when SH (Superheat) is selected
+Select the type of control: SH (Electronic Expansion Valve), SHt (Electronic Expansion Valve with Thermostat) EPR
+CtL CtL Control Type Setpoint
+(Electronic Pressure Regulating Valve), HGB (Electronic Hot Gas Bypass Valve),
+CUS CUS Custom Setpoint Used for Custom defrost schedule or Custom valve option
+d1 d1 Defrost #1 Setpoint Start time of Defrost #1 when in defrosts per day (dPd) is custom (CUSt); based on 24-hour clock
+d2 d2 Defrost #2 Setpoint Start time of Defrost #2 when in defrosts per day (dPd) is custom (CUSt); based on 24-hour clock
+d3 d3 Defrost #3 Setpoint Start time of Defrost #3 when in defrosts per day (dPd) is custom (CUSt); based on 24-hour clock
+d4 d4 Defrost #4 Setpoint Start time of Defrost #4 when in defrosts per day (dPd) is custom (CUSt); based on 24-hour clock
+d5 d5 Defrost #5 Setpoint Start time of Defrost #5 when in defrosts per day (dPd) is custom (CUSt); based on 24-hour clock
+d6 d6 Defrost #6 Setpoint Start time of Defrost #6 when in defrosts per day (dPd) is custom (CUSt); based on 24-hour clock
+d7 d7 Defrost #7 Setpoint Start time of Defrost #7 when in defrosts per day (dPd) is custom (CUSt); based on 24-hour clock
+d8 d8 Defrost #8 Setpoint Start time of Defrost #8 when in defrosts per day (dPd) is custom (CUSt); based on 24-hour clock
+d9 d9 Defrost #9 Setpoint Start time of Defrost #9 when in defrosts per day (dPd) is custom (CUSt); based on 24-hour clock
+d10 d10 Defrost #10 Setpoint Start time of Defrost #10 when in defrosts per day (dPd) is custom (CUSt); based on 24-hour clock
+d11 d11 Defrost #11 Setpoint Start time of Defrost #11 when in defrosts per day (dPd) is custom (CUSt); based on 24-hour clock
+d12 d12 Defrost #12 Setpoint Start time of Defrost #12 when in defrosts per day (dPd) is custom (CUSt); based on 24-hour clock
+dEr dEr Derivative Setpoint Should not be adjusted unless instructed by KE2 Therm technical support
+dFt dFt Defrost Time Setpoint Maximum time system is allowed in defrost
+diS diS Disabled Setpoint Choice under Start time when setting CUS (custom) dPd (defrosts per day)
+dPd dPd Defrost Per Day Setpoint Number of defrosts per day 0-12, CUS (custom)
+ds1 ds1 Danfoss KVS 15 Valve Setpoint Option under EDt (valve selection) for pressure regulating valves
+ds4 ds4 Danfoss KVS 42 Valve Setpoint Option under EDt (valve selection) for pressure regulating valves
+Edt Edt Expansion Device Type Setpoint Valve Selection
+EPr EPr Electronic Pressure Regulating Setpoint Type of control option under CtL (control type)
+ES1 ES1 ESR 12 Valve Setpoint Option under EDt valve selection for pressure regulating valves
+ES2 ES2 ESR 20 Valve Setpoint Option under EDt valve selection for pressure regulating valves
+ESO ESO External System Off Setpoint When 3rd party signal present valve closes
+FAH FAH Fahrenheit Setpoint Default for all temperatures displayed
+FAC FAC Factory Default Manual Manual option to return controller to Factory Default settings
+HAO HAO High Alarm Offset Setpoint Number of degrees above the Temperature Setpoint (tS) for a High Temp Alarm (HtA) condition.
+HGb H B Hot Gas Bypass Valve Setpoint Option under CtL (Control Type)
+Occurs when the temperature reading is above the Pressure setpoint + High Alarm Offset setpoint for the
+HPA HPA High Pressure Alarm Alarm amount of time in setpoint High Low Alarm Delay.; High Temperature or pressure alarm is cleared and disabled
+while in defrost.
+HS HS KE2-HSV Valve Setpoint Electronic expansion valve option under EDt (valve selection)
+Occurs when superheat is 2 or more degrees above set point and valve is 100% open for 90 minutes; Clears when
+HSH HSH High Superheat Alarm Alarm
+superheat is within 2 degrees of setpoint
+Occurs when the temperature reading is above the Temperature set point + Temperature differential set point
+HtA HtA High Temperature Alarm Alarm + High Alarm Offset set point for the amount of time in set point High & Low Alarm Delay; High Temperature or
+pressure alarm is cleared and disabled while in defrost
+inL inL Inlet Temperature Variable Temperature measured at the evaporator inlet. Only if SH and tt are selected as the input
+inP inP Input Type Setpoint Select type of control: EPR & HGb - PrS (pressure) or tPr (temp); EEV - Pt (pressure/temp)or tt (temp/temp)
+int int Integral Setpoint A coefficient to the valve control algorithm that increases valve responsiveness
+iSA iSA Inlet Sensor Alarm Alarm Valve closes and turns system off.
+LAO LAO Low Alarm Offset Setpoint Number of degrees below the Temperature Setpoint (tS) for a Low Temp Alarm (LtA) condition.
+LPA LPA Low Pressure Alarm Alarm Pressure is below Low Pressure Cutout (LPC) after 3 consecutive attempts to start the system
+LPC LPC Low Pressure Cut Out Setpoint Pressure at which controller de-energizes the Compressor/Liquid Line Solenoid relay (COr)
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 16
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Abbreviations - Alphabetical Listing (continued)
+Abbreviation Name Type Description
+LPd LPd Low Pressure Cut Out Differential Setpoint Psi above Low Pressure Cutout (LPC) at which Compressor/Liquid Line Solenoid relay (COr) is energized
+LPt LPt Low Pressure Cut Out Delay Setpoint Time delay before Low Pressure Alarm (LPA) is activated. 0 = Disabled.
+LSA LSA Leaving Liquid Temp Sensor Alarm Alarm Leaving Liquid Temp Sensor (Temp 2) input is open or shorted. SUb (subcool) control mode only.
+Occurs when superheat is 2 or more degrees above set point and valve is 100% open for 90 minutes,; Clears
+LSH LSH Low Superheat Alarm Alarm
+when superheat is above 3 deg F
+LLt LLt Leaving Liquid Temp Variable Temperature of the liquid leaving the heat exchanger
+Average temperature is below the Temperature Setpoint (tS) - Low Alarm Offset (LAO) for the amount of time in
+LtA LtA Low Temperature Alarm Alarm
+the High & Low Alarm Delay (tAd)
+nOA nOA No Alarm Variable Indicates system is clear of alarm conditions
+OFF OFF Compressor Relay OFF Variable Status of Compressor Relay - OFF
+On On Compressor Relay On Variable Status of Compressor Relay - On
+OPn OPn Valve Percent Open Variables The percentage the valve is open from 0 to 100%
+Occurs when call for pumping system down and the compressor is turned off due to time out instead of pressure
+Pdt Pdt Pump down Timeout Alarm Alarm reaching LPC setpoint for 2 consecutive times; Alarm is cleared when pressure reaches LPC setpoint instead of
+timing out.
+Occurs when the controller has lost power at some point, and controller had CUS (custom defrost schedule)
+PF PF Power Failure Alarm
+selected, under Defrosts Per Day (dPd)
+POS POS Manually Adjust Valve Position Manual Manually open or close the electronic valve in percentage increments (1%, 10%, or 100% increments)
+PrO PrO Proportional Setpoint A coefficient to the valve control algorithm that increases valve responsiveness
+PrS PrS Pressure Setpoint Option for InP (input type) when HGB or EPR are selected for CtL (control type)
+PSA PSA Pressure Sensor Alarm Alarm Suction pressure sensor is shorted, open or pressure out of range.
+PSP PSP Pressure Setpoint Setpoint Available when HGB or EEPR control is selected. Target pressure for control algorithm.
+Pt Pt Pressure/Temperature Setpoint Option for InP (input type) when SH (EEV) is selected for CtL (control type)
+rEL rEL Relay Control Manual Manually control the relay
+rFG rF Refrigerant Setpoint Type of refrigerant used in the system
+rS rS KE2-RSV Setpoint Electronic Expansion Valve Option under EDt (Expansion Device Type)
+rtP rtP Room Temp Variable Temperature of the refrigerated space; Not shown if in EEPR or EHGBP control and input is pressure.
+Saturation temperature as calculated by the controller,Displayed if SH is selected for CtL (control type), and Pt
+SAt SAt Saturation Temperature Variable
+(pressure/temp) is selected as InP (input type), (requires pressure transducer and T1 sensor)
+Occurs when the compressor has to come back on because of pressure going above LPC setpoint without satis-
+SCC SCC Short Cycle Compressor Alarm fying minimum off time. If this occurs 4 times while in Off mode, can be over multiple cycles, set alarm; Clear
+alarm if pressure does not go above LPC setpoint through minimum off time.
+SD3 SD3 SDR-3 Valve Setpoint Electronic Hot Gas Bypass Valve under EDt (Expansion Device Type)
+SD4 SD4 SDR-4 Valve Setpoint Electronic Hot Gas Bypass Valve under EDt (Expansion Device Type)
+SFS SFS Steps Full Stroke Setpoint When CUS (custom) valve is selected, the number of steps to fully open or close the valve
+SH SH Superheat Control Setpoint Control type under CtL when EEV Only is used.
+SH SH Superheat Variable Displayed if SHt is selected for CtL (Control Type)
+SHt SHt Superheat + Temperature Control Setpoint Control type under CtL when EEV+ Temperature is used.
+SOF SOF System Off Manual Manually enter system off mode
+When CUS (custom) valve is selected, the steps per second in opening or closing the valve (provided by the valve
+Sr Sr Step Rate Setpoint
+manufacturer)
+SSA SSA Suction Temperature Sensor Alarm Valve closes and turns system off.
+The superheat value that the controller will maintain, not applicable if Edt (Expansion Device Type) = tHR
+SSP SSP Superheat Setpoint Setpoint
+(mechanical)
+SUb SUB Subcool Setpoint Control type under CtL when used for a subcooler application.
+SUt SUt Suction Temperature Variable Only if in SH (EEV) control
+SYS SYS System Mode Variable Displays mode of system operation: rEF (refrigerate), dEF (defrost), OFF, SOF (system manually shut off)
+tAd tAd Temperature Alarm Delay Setpoint High / Low Temperature Alarm Delay Amount of time to delay a high temp or low temp alarm
+tHr tHr Mechanical Valve Setpoint Mechanical Valve selection under EDt (Expansion Device Type)
+tOd tOd Time of Day Setpoint Used to set the time of day on the controller; Only displayed when dPd (defrosts per day) is CUS (custom)
+tOP tOP Maximum (Top) Operating Pressure Setpoint The maximum allowable suction pressure, not applicable if Edt (Expansion Device Type) = tHR (mechanical)
+tS tS Temperature Setpoint Setpoint Room temperature to be maintained
+tt tt Temperature/Temperature Setpoint Option for InP (input type) when HS (EEV) is selected for CtL (control type)
+tPr tPr Temperature Setpoint Option for InP (input type) when HGB or EPR are selected for CtL (control type)
+Ub Ub Motor Type Setpoint When CUS (custom) valve is selected, the type of valve motor: Uni (unipolar), bi (bipolar)
+Unt Unt Temp Units Setpoint Fahrenheit (FAH) or Celsius (CEL)
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 17
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Custom Defrost Setup
+STEP 3
+The following steps will guide you through
+t o d
+Press the up arrow until CUS is dis-
+the setup of the KE2 Temp’s custom de-
+played.
+frost feature.
+Please note, the KE2 Temp + Valve Con- C U S
+trol does not have an on-board battery
+STEP 5
+backup. If the controller loses power, the
+Press the up arrow to display
+defrost schedule may be offset by the
+Defrost 1 (d1).
+amount of time the controllers is without Press and hold the button for 3
+power. seconds until the dPd is displayed.
+d d 1
+Abbreviations:
+d p d
+CUS = custom
+d1 = custom defrost 1
+diS = disabled To set the first defrost, press
+dpd = defrosts per day button.
+ts = temperature setpoint Indicator ligShTtEsP 4
+tod = time of day Red ligPhret s- sc rtihtiec al aluaprm a r(rsoyswte umn tisil N toOdT r(utinmnein ogf) diS (disabled) will be displayed.
+Yellowd liagyh) ti s- ndoisnp-lcaryiteicda,l alarm (system running) d i s
+Green light - compressor on
+Green btlinkingo - compdressor waiting on timer to start/stop
+3 5 1 Access Setpoint mode by pressing and holding the E N T E R U se the down arrow to set the
+button until CtL (control type) displays on the screen
+defrost time.
+Use arrowth teon a pdrveasns ce through available setpoints.
+Press E N T E R U t s o e v t i h e e w the u c p u a rr r e ro n w t s a e n tt d in g. down arrow Note: Defrost times may only be set
+on the hour.
+Use the taon sde t t thoe c thimaneg.e the setpoint
+Press E N T E R to move between digits to accelerate Example:
+the changes.
+Note: The time is displayed in military time 2:00 am would be 2
+Press E N T E R ( 2 a4n-hdr h cololdc kt)o T choen 1fisrmt 2 e daicghit sse atrpeo tihnte chhoaunrg. e
+STEP 1 The minutes are after the decimal. Since d d 2
+Press B A C K to escape.
+Press and hold the button, tS is there are only 3 digits, the time will be set
+displayed on the LEDs to the nearest 10 minutes. See examples
+below.
+Once the correct time is displayed,
+t S Examples:
+press and hold the button
+8:10 am would be 8.1 on the
+until d1 is displayed.
+controller’s display
+d d 1
+STEP 2
+d 8 1
+Press the up arrow until dPd is dis-
+played,
+STEP 6
+d p d
+Repeat steps as necessary for d2 to d12.
+4:32 p.m. would be 16.3 on the con-
+troller’s display.
+d d 2 d 1 2
+then press , 6 (default) will be 1 6 3
+displayed.
+t 6 STEP 7
+Press the button to save set-
+After the time is set, press and hold the
+tings, and return to the main screen
+button for 3 seconds, until tOd is
+(room temp will be displayed).
+displayed
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 18
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Pressure Transducer
+Evaporator
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+dleihS -B +A
+CONTROL TYPE: Superheat and Temperature w. Air Defrost
+SStteepp 11 Step 2 Step 3 Step 4
+Control Type Superheat & Input Pressure/Temperature
+Temperature
+Suction Temperature
+RSV
+Return Air
+Temperature
+Communication
+ModBus communication can be connected to existing Building Management System (BMS) or to
+KE2 Therm’s KE2-EM Communication device.
+Using the KE2-EM allows quick & easy access to monitor & control the KE2 Temp + Valve, as
+well as receive alarm notifications via text or email. For more information see Bulletin B.5.10.
+Pressure Transducer
+Evaporator
+dleihS -B +A
+Air Temp Sensor
+Suction Sensor
+Pressure Transducer
+Ribbon Cable
+PWR CB
+Red Blk Grn TEMP 1TEMP 2
+TEMP 3
+ModBus
+CN2 RS-485 RSV- Blue Org Yel Red Blk Transformer Sh B A Empty Red Grn Wht Blk
+18V
+CN7 CN3
+LLS/Comp. Contactor Relay Wiring
+Put jumper wire from
+L1 (terminal 1) to COM (terminal 5)
+5 4 3 2 1
+COM NC NO L2 L1
+Relay
+11V5A/2C30
+EEV
+L1
+LLS / 120 (208 - 240)/1/60
+COMP CONTACTOR CONTROLLER
+POWER SUPPLY
+Neutral (L2)
+CONTROL TYPE: Superheat Only
+Step 1 Step 2 Step 3 Step 4
+Control Type Superheat Input Pressure/Temperature
+Suction Temperature
+External
+Open = Run
+Short = Off System
+Off ①②
+RSV
+①KE2 Temp + Valve should be supplied with signal from 3rd party to close valve when function not desired.
+②The controller relay will switch with 3rd party signal. The relay will be energized while the system is running.
+Communication
+ModBus communication can be connected to existing Building Management System (BMS) or to
+KE2 Therm’s KE2-EM Communication device.
+Using the KE2-EM allows quick & easy access to monitor & control the KE2 Temp + Valve, as
+well as receive alarm notifications via text or email. For more information see Bulletin B.5.10.
+Q.3.49 January 2023
+Page 19
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Evaporator
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+dleihS -B +A
+CONTROL TYPE: Hot Gas Bypass: Temperature Control
+Step 1 Step 2 Step 3 Step 4
+Control Type Hot Gas Bypass Input Temperature
+Discharge
+Open = Run External Air Temperature
+Short = Off System Off*
+RSV
+Electric Hot Gas
+Bypass Valve
+* KE2 Temp + Valve should be supplied with signal from 3rd party to close valve when function not desired.
+Communication
+ModBus communication can be connected to existing Building Management System (BMS) or to
+KE2 Therm’s KE2-EM Communication device.
+Using the KE2-EM allows quick & easy access to monitor & control the KE2 Temp + Valve, as
+well as receive alarm notifications via text or email. For more information see Bulletin B.5.10.
+Step 1
+Pressure Transducer
+Open = Run
+Short = Off
+Evaporator
+dleihS -B +A
+CONTROL TYPE: Hot Gas Bypass: Pressure for Capacity Control
+Step 2 Step 3 Step 4
+Control Type Hot Gas Bypass Input Pressure
+External
+System Off*
+Electric Hot Gas
+Bypass Valve
+*KE2 Temp + Valve should be supplied with signal from 3rd party to close valve when function not desired.
+Communication
+ModBus communication can be connected to existing Building Management System (BMS) or to
+KE2 Therm’s KE2-EM Communication device.
+Using the KE2-EM allows quick & easy access to monitor & control the KE2 Temp + Valve, as
+well as receive alarm notifications via text or email. For more information see Bulletin B.5.10.
+Q.3.49 January 2023
+Page 20
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Evaporator
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+dleihS -B +A
+CONTROL TYPE: Electronic Evaporator Pressure Regulator: Discharge or Return Air Temperature
+SSSttteeeppp 111 Step 2 Step 3 Step 4
+Control Type Evaporator Pressure Input Temperature
+Regulating
+CASES
+Open = Run External Discharge
+Short = Off System Off* Air Temperature *KE2 Temp + Valve should be supplied
+with signal from 3rd party to close valve
+when function not desired.
+Communication
+ModBus communication can be con-
+nected to existing Building Management
+System (BMS) or to KE2 Therm’s
+KE2-EM Communication device.
+RSV
+Using the KE2-EM allows quick & easy
+access to monitor & control the KE2
+Temp + Valve, as well as receive alarm
+notifications via text or email. For more
+information see Bulletin B.5.10.
+WALK-INS
+Evaporator
+dleihS -B +A
+Open = Run External
+Short = Off System Off*
+RSV
+Return Air
+Temperature
+Pressure Transducer
+Evaporator
+dleihS -B +A
+CONTROL TYPE: Electronic Evaporator Pressure Regulator: Pressure Control
+SSSttteeeppp 111 Step 2 Step 3 Step 4
+Control Type Evaporator Pressure Input Pressure
+Regulating
+*KE2 Temp + Valve should be supplied
+O Sh p o e r n t = = O Ru ff n E Sy x s te te rn m a O l ff* w w i h t e h n s i f g u n n a c l ti f o ro n m n o 3 t r d d e p s a ir r e t d y . to close valve
+Communication
+ModBus communication can be con-
+nected to existing Building Management
+System (BMS) or to KE2 Therm’s
+KE2-EM Communication device.
+RSV Using the KE2-EM allows quick & easy
+access to monitor & control the KE2
+EEPRV
+Temp + Valve, as well as receive alarm
+notifications via text or email. For more
+information see Bulletin B.5.10.
+Q.3.49 January 2023
+Page 21
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+MULTI-EVAPORATOR SETUP
+Master: Controller 1 - Superheat & Temperature (SHt)
+because it also controls temperature
+SStteepp 11 Step 2
+Control Type Superheat &
+Temperature
+Pressure Transducer
+Suction Temperature
+Air Temperature
+Evaporator 1
+Board shown -
+top of cover
+RSV
+Evaporator
+Return Air
+Temperature
+Board shown -
+bottom of base
+Slave: Controller 2 - Superheat (SH)
+SStteepp 11 Step 2
+Control Type Superheat
+Pressure Transducer
+NC Temp 2 Suction
+COM Temperature Evaporator 2
+Board shown -
+top of cover RSV
+Evaporator
+Board shown -
+bottom of base
+Slave: Controller 3 - Superheat (SH)
+SStteepp 11 Step 2
+Control Type Superheat
+Pressure Transducer
+NC Temp 2 Suction
+COM Temperature Evaporator 3
+Board shown -
+top of cover RSV
+Evaporator
+Board shown -
+bottom of base
+Put jumper wire from L1 (terminal 1)
+5 4 3 2 1 to COM (terminal 5)
+NOL2L1
+LLS (Liquid Line Solenoid) or
+COMP CONTACTOR
+120 (208 - 240)/1/60
+CONTROLLER POWER SUPPLY
+Neutral (L2)
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 22
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Control Type: Subcool
+SStteepp 11 Step 2
+Control Type Subcool
+Pressure Transducer
+Suction Temperature*
+Liquid Leaving Temp
+Board shown -
+top of cover
+Warm Liquid Subcooled Liquid
+Subcooling Heat
+Exchanger
+RSV
+Board shown -
+bottom of base
+Put jumper wire from
+5 4 3 2 1 L1 (terminal 1) to
+LLS
+COM (terminal 5)
+NO L2 L1
+120 (208 - 240)/1/60
+CONTROLLER POWER SUPPLY
+Neutral (L2)
+* Shorting the suction temperature sensor input will cause the controller to go to System Off mode (SOF) and close the LLS and EEV.
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090
+Q.3.49 January 2023
+Page 23
+KE2 Temp+Valve Control
+For Temp. Air Defrost, & Electronic Valve Control Installation Manual
+Wiring Diagram
+Air Temp Sensor /
+Leaving Liquid Temp (Subcooling Control)
+Suction Sensor
+Observe proper orientation
+Suction Pressure Transducer of Ribbon Cable.
+Ribbon
+Cable
+PWR CB
+Red Blk Grn TEMP 1 TEMP 2
+TEMP 3
+ModBus
+CN2
+RS-485 RSV- Blue Org Yel Red Blk Transformer
+Sh B A Empty Red Grn Wht Blk
+18V
+CN7 CN3
+Dimensions - Inches Air Temp Sensor
+Suction Sensor
+Top View Put jumper wire
+1.09 Pressure Transducer from L1 (terminal 1)
+to COM (terminal 5)
+5 4 3 2 1
+Ribbon Cable COM NC NO L2 L1
+Relay
+EEV
+115/230
+VAC
+6.68 PWR CB
+Red Grn Blk TEMP 1 TEMP 2
+4.50 TEMP 3 LLS (Liquid Line Solenoid) or
+LLS
+COMPRESSOR CONTACTOR
+COMP
+ModBus 120 (208 - 240)/1/60
+115/230
+CONTROLLER VAC
+CN2 POWER SUPPLY
+RS-485 RSV- Blue Org Yel Red Blk TransformNereutral (L2)
+Sh B A Empty Red Grn Wht Blk
+18V
+CN7 CN3
+120 (208 - 240)/1/60
+LLS
+COMP CONTROLLER
+POWER SUPPLY
+Alternate Wiring Method Neutral (L2)
+0.20
+Hole
+2.30 5 4 3 2 1
+2.79
+COM NC NO L2 L1
+Relay
+2.30 115/230
+EEV VAC
+End View
+2.14
+L1 L1
+120 (208 - 240)/1/60
+LLS Power Supply LLS
+COMP CONTROLLER POWER
+SUPPLY
+Neutral (L2) Neutral (L2)
+© Copyright 2023 KE2 Therm Solutions, Inc., Washington, Missouri 63090 KE2 Therm Solutions
+Q.3.49 January 2023 supersedes all prior publications. 12 Chamber Drive . Washington, MO 63090
+1.888.337.3358 . www.ke2therm.com

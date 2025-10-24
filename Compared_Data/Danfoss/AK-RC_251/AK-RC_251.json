@@ -1,0 +1,12 @@
+{
+    "AK-RC 251": {
+        "1. Hardware features and specifications": "- Power supply: 100 \u2013 240 V~, 50 \u2013 240 Hz\n- 5 relay temperature controller\n- No circuit breaker or contactor included\n- Protection degree: IP65 (with cover closed and proper cable entry)\n- NTC probes supplied by Danfoss\n- Probe extension up to 3,280 ft with 20AWG cable, max deviation 0.45\u00b0F",
+        "2. Functions": "- Cold regulation\n- Door management\n- Defrost\n- Defrost control\n- Fan control\n- Alarms\n- Alerts\n- Light control\n- Password protection\n- Remote Stand-by mode\n- Operation of auxiliary relays",
+        "3. Core features": "- Temperature controller for walk-in coolers and freezers\n- HACCP compliance\n- Continuous cycle mode",
+        "4. Additional features": "- Programmable auxiliary relays\n- Digital inputs configurable\n- Acoustic and relay alarms\n- Muted alarm option",
+        "5. User experience": "- Display with indicators for status\n- Keypad for control and programming\n- Menu navigation",
+        "6. Connectivity": "- Not specified in user guide",
+        "7. Standards compliance": "- IP65 protection\n- Local regulations compliance",
+        "8. Notes": "- Use only Danfoss NTC probes\n- Install protected from vibrations, water, corrosive gases\n- Clean with soft cloth, water, soap\n- Do not use abrasive detergents"
+    }
+}

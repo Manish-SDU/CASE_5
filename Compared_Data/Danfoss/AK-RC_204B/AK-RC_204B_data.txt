@@ -1,0 +1,72 @@
+### 1. Hardware features and specifications
+- Power supply: 230 V~ ± 10%, 50 Hz ± 5%
+- Maximum input power: 6.3 VA
+- Maximum nominal current: 15 A
+- Relays:
+- SSV / DEFROST: SPDT - 20 A (NO 15A, NC 13A 250V~)
+- FAN: SPST - 16 A (12A 250V~)
+- COOL: SPST - 16 A (12A 250V~)
+- AUX 1: SPDT - 20 A (NO 15A, NC 13A 250V~)
+- AUX 2: SPDT - 16 A (NO 12A, NC 10A 250V~)
+- Probe temperature range: -50.0 – +99.9 °C
+- Resolution, setting and differential: 0.1 °C
+- Thermometric precision: ±1 °C
+- Loading tolerance of NTC probe at 25°C: ±0.4 °C
+- Working ambient temperature: -10 – +50 °C
+- Storage ambient temperature: -30 – +60 °C
+- Protection degree: IP 65
+- Installation category: II s/ EN 60730-1
+- Pollution degree: II s/ EN 60730-1
+- Dimensions: 290 mm (W) x 141 mm (H) x 84.4 mm (D)
+- Internal buzzer: Yes
+- Modbus address: Shown on label
+
+### 2. Functions
+- Temperature regulation for walk-in coolers
+- Defrost control
+- Fan control
+- Solenoid valve control
+- Compressor control
+- Alarm management
+- HACCP alarms
+- Continuous cycle mode
+- Cold room light control
+- Door control
+- Stand-by mode
+
+### 3. Core features
+- Temperature controller for walk-in coolers and freezers
+- Startup wizard for initial configuration
+- Magnetic thermal circuit protection
+
+### 4. Additional features
+- Advanced defrost logic
+- Datalogger option with PR-SC4
+- Integration into Danfoss ADAP-KOOL system over Modbus
+- Standard Modbus connectivity for 3rd party integration
+- Optional cloud and remote connectivity via ProsaLink app, IoT module and Cloud service
+
+### 5. User experience
+- Wide display with clear and intuitive menu
+- Keypad with buttons for navigation, settings, and controls
+- Indicators for status (stand-by, door open, alarms, fans, solenoid, compressor, defrost, continuous cycle, light, alarm mute, temperature unit, programming mode)
+
+### 6. Connectivity
+- Modbus for integration
+- Optional IoT module for cloud connectivity
+
+### 7. Standards compliance
+- EN60730-1 for relays and operations
+- IP65 protection
+- Pollution degree II
+- Installation category II
+- Double isolation between power supply, secondary circuit and relay output
+
+### 8. Notes
+- Use only Danfoss supplied NTC probes
+- Install in protected location from vibrations, water, corrosive gases
+- IP65 valid only with cover closed and proper cable entry
+- Do not spray with high-pressure hoses
+- Relays are programmable, function depends on configuration
+- Digital inputs function depends on configuration
+

@@ -1,0 +1,12 @@
+{
+    "AK-RC 305W-SD": {
+        "1. Hardware features and specifications": "- Power Supply: 100 \u2013 240 V AC\n- Dimensions: 290x141x84.4 mm\n- Sealing: IP65\n- Electrical Protection: Yes (16A)\n- Digital outputs: 2 SPDT 20A, 2 SPST 16A\n- Analog inputs: 2 NTC\n- Digital inputs: 1",
+        "2. Functions": "- Compressor control\n- Crankcase resistor control\n- Evaporator fans control\n- Defrost resistance control (up to 2 evaporators)\n- Solenoid valve control\n- Cold room light control\n- Door frame and drain heaters control\n- Door control (activity and alarms)\n- Remote Setpoint change and defrost\n- Alarms: Temperature, Open door",
+        "3. Core features": "- Temperature control\n- Advanced defrost function\n- Wizard Menu\n- Modbus",
+        "4. Additional features": "- Adaptive Defrost logic to optimize energy saving\n- Datalogger Option with PR-SC4\n- Integration into Danfoss ADAP-KOOL system over Modbus\n- Standard Modbus connectivity for 3rd party integration\n- Optional cloud and remote connectivity via ProsaLink app, IoT module and Cloud service",
+        "5. User experience": "- Wide display, clear and intuitive menu\n- Fast commissioning with startup wizard",
+        "6. Connectivity": "- Modbus\n- Optional cloud and remote connectivity",
+        "7. Standards compliance": "- IP65 sealing",
+        "8. Notes": "- Designed for cold storage rooms\n- Saves installation time, reduces energy consumption, best food quality preservation"
+    }
+}

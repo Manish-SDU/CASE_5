@@ -1,0 +1,49 @@
+### 1. Hardware features and specifications
+- Power Supply: 100 – 240 V AC
+- Dimensions: 290x141x84.4 mm
+- Sealing: IP65
+- Electrical Protection: Yes (16A)
+- Digital outputs: 2 SPDT 20A, 2 SPST 16A
+- Analog inputs: 2 NTC
+- Digital inputs: 1
+
+### 2. Functions
+- Compressor control
+- Crankcase resistor control
+- Evaporator fans control
+- Defrost resistance control (up to 2 evaporators)
+- Solenoid valve control
+- Cold room light control
+- Door frame and drain heaters control
+- Door control (activity and alarms)
+- Remote Setpoint change and defrost
+- Alarms: Temperature, Open door
+
+### 3. Core features
+- Temperature control
+- Advanced defrost function
+- Wizard Menu
+- Modbus
+
+### 4. Additional features
+- Adaptive Defrost logic to optimize energy saving
+- Datalogger Option with PR-SC4
+- Integration into Danfoss ADAP-KOOL system over Modbus
+- Standard Modbus connectivity for 3rd party integration
+- Optional cloud and remote connectivity via ProsaLink app, IoT module and Cloud service
+
+### 5. User experience
+- Wide display, clear and intuitive menu
+- Fast commissioning with startup wizard
+
+### 6. Connectivity
+- Modbus
+- Optional cloud and remote connectivity
+
+### 7. Standards compliance
+- IP65 sealing
+
+### 8. Notes
+- Designed for cold storage rooms
+- Saves installation time, reduces energy consumption, best food quality preservation
+
