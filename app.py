@@ -26,6 +26,20 @@ def load_css():
             return f"<style>{f.read()}</style>"
     return ""
 
+def clean_device_name(device_key):
+    """Extract clean device name from JSON key"""
+    # Remove common suffixes like "Quick Start Guide", file extensions, language codes
+    import re
+    
+    # Remove common patterns
+    name = device_key
+    name = re.sub(r'\s+(Quick Start Guide|User Guide|Manual|Datasheet|Documentation)', '', name, flags=re.IGNORECASE)
+    name = re.sub(r'\s+en$', '', name, flags=re.IGNORECASE)  # Remove language code at end
+    name = re.sub(r'\.(pdf|txt|doc|docx)$', '', name, flags=re.IGNORECASE)  # Remove extensions
+    name = name.strip()
+    
+    return name
+
 def load_json(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         return json.load(f)
@@ -252,7 +266,7 @@ def clean_ai_response(response_text):
     
     return cleaned_response
 
-def get_comparison(company, device):
+def get_comparison(company, device, external_device=None):
     try:
         danfoss_json = 'Compared_Data/Danfoss/all_devices.json'
         # Look for the new AI-extracted features JSON
@@ -275,12 +289,19 @@ def get_comparison(company, device):
         
         danfoss_features = danfoss_data[device]
         
-        # Get the first (and typically only) company device
-        company_device_name = list(company_data.keys())[0] if company_data else "Unknown Device"
-        company_features = list(company_data.values())[0] if company_data else {}
+        # Get the selected external device or default to first one
+        if external_device and external_device in company_data:
+            company_device_name = external_device
+            company_features = company_data[external_device]
+        else:
+            company_device_name = list(company_data.keys())[0] if company_data else "Unknown Device"
+            company_features = list(company_data.values())[0] if company_data else {}
+        
+        # Use clean name for display
+        company_device_display_name = clean_device_name(company_device_name)
         
         # Create structured comparison
-        output = f"### Feature Comparison: Danfoss {device} vs {company} {company_device_name}\n\n"
+        output = f"### Feature Comparison: Danfoss {device} vs {company} {company_device_display_name}\n\n"
         
         comparison_data = create_comparison_table(danfoss_features, company_features, company, danfoss_data)
         
@@ -341,7 +362,7 @@ def get_comparison(company, device):
         prompt = f"""
         Compare these refrigeration controllers for industrial applications:
         
-        Danfoss {device} vs {company} {company_device_name}
+        Danfoss {device} vs {company} {company_device_display_name}
         
         Feature Analysis:
         {chr(10).join(ai_comparisons)}
@@ -405,19 +426,25 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+# Comparison mode selection
+st.markdown("#### Comparison Mode")
+comparison_mode = st.radio(
+    "Select comparison type:",
+    ["Single Device Comparison", "Compare with All Devices in One Company", "Compare with All Devices in All Companies"],
+    horizontal=True,
+    label_visibility="collapsed"
+)
+
 companies = [d for d in os.listdir('EXTERNAL_COMPANIES') if os.path.isdir(os.path.join('EXTERNAL_COMPANIES', d))]
 if not companies:
     st.error("❌ No external companies found in EXTERNAL_COMPANIES folder.")
     st.stop()
 
-# Selection dropdowns in one row
-col1, col2 = st.columns(2)
+if comparison_mode == "Single Device Comparison":
+    # Selection dropdowns in three columns
+    col1, col2, col3 = st.columns(3)
 
-with col1:
-    company = st.selectbox("Competitor Company", companies)
-
-with col2:
-    if company:
+    with col1:
         try:
             danfoss_json = 'Compared_Data/Danfoss/all_devices.json'
             if not os.path.exists(danfoss_json):
@@ -436,22 +463,182 @@ with col2:
             st.error(f"❌ **Application Error:** {str(e)}")
             st.stop()
 
-# Compare button below the dropdowns
-if company and 'device' in locals():
-    compare_btn = st.button("Compare", type="primary", use_container_width=True)
-else:
-    compare_btn = False
+    with col2:
+        company = st.selectbox("Competitor Company", companies)
 
-# Comparison results
-if company and 'device' in locals() and compare_btn:
-    with st.spinner("Analyzing..."):
-        comparison_output, ai_output = get_comparison(company, device)
-    
-    # Display the detailed comparison first
-    st.markdown("---")
-    st.markdown(comparison_output, unsafe_allow_html=True)
-    
-    # Show AI Analysis at the bottom - directly visible
-    st.markdown("---")
-    st.markdown("### 🤖 AI Analysis & Recommendations")
-    st.markdown(ai_output)
+    with col3:
+        if company:
+            try:
+                # Get available external company devices
+                company_json_files = [f for f in os.listdir(f'Compared_Data/External/{company}') 
+                                     if f.endswith('_features.json')]
+                
+                if not company_json_files:
+                    st.error(f"❌ No feature data found for {company}")
+                    st.stop()
+                
+                company_json = os.path.join(f'Compared_Data/External/{company}', company_json_files[0])
+                company_data = load_json(company_json)
+                
+                # Get list of external devices with cleaned names
+                external_devices_raw = list(company_data.keys())
+                
+                if not external_devices_raw:
+                    st.error(f"❌ No devices found for {company}")
+                    st.stop()
+                
+                # Create a mapping of clean names to original keys
+                device_name_mapping = {clean_device_name(dev): dev for dev in external_devices_raw}
+                clean_device_names = list(device_name_mapping.keys())
+                
+                selected_clean_name = st.selectbox(f"{company} Device", clean_device_names)
+                external_device = device_name_mapping[selected_clean_name]
+            except Exception as e:
+                st.error(f"❌ **Error loading {company} devices:** {str(e)}")
+                st.stop()
+
+    # Compare button below the dropdowns
+    if company and 'device' in locals() and 'external_device' in locals():
+        compare_btn = st.button("Compare", type="primary", use_container_width=True)
+    else:
+        compare_btn = False
+
+    # Comparison results
+    if company and 'device' in locals() and 'external_device' in locals() and compare_btn:
+        with st.spinner("Analyzing..."):
+            comparison_output, ai_output = get_comparison(company, device, external_device)
+        
+        # Display the detailed comparison first
+        st.markdown("---")
+        st.markdown(comparison_output, unsafe_allow_html=True)
+        
+        # Show AI Analysis at the bottom - directly visible
+        st.markdown("---")
+        st.markdown("### 🤖 AI Analysis & Recommendations")
+        st.markdown(ai_output)
+
+elif comparison_mode == "Compare with All Devices in One Company":
+    # Selection for Danfoss device and one company
+    col1, col2 = st.columns(2)
+
+    with col1:
+        try:
+            danfoss_json = 'Compared_Data/Danfoss/all_devices.json'
+            if not os.path.exists(danfoss_json):
+                st.error("❌ Danfoss device data not found.")
+                st.stop()
+                
+            danfoss_data = load_json(danfoss_json)
+            devices = list(danfoss_data.keys())
+            
+            if not devices:
+                st.error("❌ No Danfoss devices found in data.")
+                st.stop()
+                
+            device = st.selectbox("Danfoss Device", devices)
+        except Exception as e:
+            st.error(f"❌ **Application Error:** {str(e)}")
+            st.stop()
+
+    with col2:
+        company = st.selectbox("Competitor Company (compare with all devices)", companies)
+
+    # Compare button
+    if company and 'device' in locals():
+        compare_btn = st.button("Compare with All Devices", type="primary", use_container_width=True)
+    else:
+        compare_btn = False
+
+    # Comparison results
+    if company and 'device' in locals() and compare_btn:
+        with st.spinner("Analyzing all devices..."):
+            try:
+                company_json_files = [f for f in os.listdir(f'Compared_Data/External/{company}') 
+                                     if f.endswith('_features.json')]
+                
+                if not company_json_files:
+                    st.error(f"❌ No feature data found for {company}")
+                    st.stop()
+                
+                company_json = os.path.join(f'Compared_Data/External/{company}', company_json_files[0])
+                company_data = load_json(company_json)
+                external_devices = list(company_data.keys())
+                
+                st.markdown("---")
+                st.markdown(f"### Comparing Danfoss {device} with all {company} devices")
+                
+                for ext_device in external_devices:
+                    clean_name = clean_device_name(ext_device)
+                    st.markdown(f"#### 🔹 vs {clean_name}")
+                    comparison_output, ai_output = get_comparison(company, device, ext_device)
+                    
+                    with st.expander(f"View Comparison: {device} vs {clean_name}", expanded=False):
+                        st.markdown(comparison_output, unsafe_allow_html=True)
+                        st.markdown("---")
+                        st.markdown("**🤖 AI Analysis**")
+                        st.markdown(ai_output)
+                    st.markdown("---")
+                    
+            except Exception as e:
+                st.error(f"❌ Error: {str(e)}")
+
+else:  # Compare with All Devices in All Companies
+    # Selection for just Danfoss device
+    try:
+        danfoss_json = 'Compared_Data/Danfoss/all_devices.json'
+        if not os.path.exists(danfoss_json):
+            st.error("❌ Danfoss device data not found.")
+            st.stop()
+            
+        danfoss_data = load_json(danfoss_json)
+        devices = list(danfoss_data.keys())
+        
+        if not devices:
+            st.error("❌ No Danfoss devices found in data.")
+            st.stop()
+            
+        device = st.selectbox("Danfoss Device", devices)
+    except Exception as e:
+        st.error(f"❌ **Application Error:** {str(e)}")
+        st.stop()
+
+    # Compare button
+    if 'device' in locals():
+        compare_btn = st.button("Compare with All Companies & Devices", type="primary", use_container_width=True)
+    else:
+        compare_btn = False
+
+    # Comparison results
+    if 'device' in locals() and compare_btn:
+        with st.spinner("Analyzing all companies and devices..."):
+            st.markdown("---")
+            st.markdown(f"### Comparing Danfoss {device} with all competitor devices")
+            
+            for company in companies:
+                try:
+                    company_json_files = [f for f in os.listdir(f'Compared_Data/External/{company}') 
+                                         if f.endswith('_features.json')]
+                    
+                    if not company_json_files:
+                        continue
+                    
+                    company_json = os.path.join(f'Compared_Data/External/{company}', company_json_files[0])
+                    company_data = load_json(company_json)
+                    external_devices = list(company_data.keys())
+                    
+                    st.markdown(f"## 🏢 {company}")
+                    
+                    for ext_device in external_devices:
+                        clean_name = clean_device_name(ext_device)
+                        st.markdown(f"#### 🔹 vs {clean_name}")
+                        comparison_output, ai_output = get_comparison(company, device, ext_device)
+                        
+                        with st.expander(f"View Comparison: {device} vs {clean_name}", expanded=False):
+                            st.markdown(comparison_output, unsafe_allow_html=True)
+                            st.markdown("---")
+                            st.markdown("**🤖 AI Analysis**")
+                            st.markdown(ai_output)
+                        st.markdown("---")
+                        
+                except Exception as e:
+                    st.warning(f"⚠️ Could not load devices for {company}: {str(e)}")
