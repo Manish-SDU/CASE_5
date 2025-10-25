@@ -1,0 +1,108 @@
+/* Simple and Clean Styling - Compact Version */
+
+.main-header {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 1rem;
+    background-color: #f8f9fa;
+}
+
+.main-header h1 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.5rem;
+}
+
+.main-header p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.comparison-card {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.comparison-card h4 {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.comparison-card-content {
+    color: #333;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.details-section {
+    margin: 8px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.details-section summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 5px;
+}
+
+.details-section summary:hover {
+    background-color: #f8f9fa;
+}
+
+.details-content {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+.stButton > button {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+}
+
+.stButton > button:hover {
+    background-color: #555;
+}
+
+/* Reduce spacing in Streamlit elements */
+.stMarkdown {
+    margin-bottom: 0.5rem;
+}
+
+.stExpander {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+}
+
+/* Make selectboxes more compact */
+.stSelectbox {
+    margin-bottom: 0;
+}
+
+/* Compact column spacing */
+[data-testid="column"] {
+    padding: 0 0.5rem;
+}
